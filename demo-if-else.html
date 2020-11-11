@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau truc dieu kien</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Nhap vao so tien cua $ cua bạn:",1);
+    let currency = '';
+    let result = 0;
+
+    if (money < 0) {
+        alert("Dang no ngap dau! di lam di.");
+    } else if (money == 0) {
+        alert("Lam gi co tien ma doi.");
+    } else {
+        currency = prompt("Nhap vao tien ban muon doi:",'euro');
+        switch (currency) {
+            case "vnd":
+                result = money * 23000;
+                break;
+            case "euro":
+                result = money * 0.84;
+                break;
+            default:
+                result = "Khong biet";
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>
